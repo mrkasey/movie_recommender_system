@@ -78,7 +78,7 @@ def recommend(movie_list):
 st.title("Movie Recommender"+":clapper:")
 
 
-x = st.multiselect( label="Select Movies", label_visibility="hidden",options= movies['movie title'].values,max_selections=3, placeholder="SELECT UPTO 3 MOVIES")
+x = st.multiselect( label="*Movie Data Upto 2022",options= movies['movie title'].values,max_selections=3, placeholder="SELECT UPTO 3 MOVIES")
 
 # Define a function to handle null values in the recommended_poster list
 def get_image_url(url):
