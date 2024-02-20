@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-movies = pickle.load(open("movies_new3.pkl",'rb'))
+movies = pickle.load(open("moviesnew_final.pkl",'rb'))
 
 def get_index(movie_name):
     idx = movies[movies['movie title'] == movie_name].index[0]
