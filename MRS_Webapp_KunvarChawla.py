@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-movies = pickle.load(open("moviesnew.pkl",'rb'))
+movies = pickle.load(open("movies_new2.pkl",'rb'))
 
 def get_index(movie_name):
     idx = movies[movies['movie title'] == movie_name].index[0]
@@ -66,7 +66,7 @@ def recommend_3(movie_list, similarity1):
         return recommended_list, recommended_poster, ratings
 @st.cache_data(show_spinner=False)
 def recommend(movie_list):
-    similarity1 = pickle.load(open("similarity_16.pkl", 'rb'))
+    similarity1 = pickle.load(open("similarity_16_new.pkl", 'rb'))
     if len(movie_list) == 1:
         return recommend_1(movie_list, similarity1)
     elif len(movie_list) == 2:
